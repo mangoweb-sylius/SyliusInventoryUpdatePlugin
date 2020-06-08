@@ -1,5 +1,5 @@
 mango_sylius_admin_inventory_update:
-    path: /admin/inventory/update
+    path: inventory/update
     methods: [PUT]
     defaults:
         _controller: mango_sylius.update_inventory_plugin.controller.product_variant_controller:saveInventoryAction
