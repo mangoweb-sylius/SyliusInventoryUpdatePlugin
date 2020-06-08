@@ -16,7 +16,7 @@
       MangoSylius\UpdateInventoryPlugin\MangoSyliusUpdateInventoryPlugin::class => ['all' => true],
    ];
    ```
-1. Add resource to `config/packeges/_sylius.yaml`
+1. Add resource to `config/packages/_sylius.yaml`
     ```yaml
     imports:
          ...
