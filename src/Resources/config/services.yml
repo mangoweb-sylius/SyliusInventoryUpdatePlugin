@@ -1,0 +1,5 @@
+services:
+    mango_sylius.update_inventory_plugin.controller.product_variant_controller:
+        public: true
+        parent: sylius.controller.product_variant
+        class: MangoSylius\UpdateInventoryPlugin\Controller\MangoProductVariantController

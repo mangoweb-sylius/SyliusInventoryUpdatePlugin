@@ -1,0 +1,8 @@
+<form id="sylius-update-inventory" class="sylius-update-inventory" action="{{ path('mango_sylius_admin_inventory_update') }}" method="post">
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('update-inventory') }}" />
+    <button class="ui labeled icon button sylius-save-stock" type="submit">
+        <i class="icon checkmark"></i>
+        {{ 'mango-sylius.admin.inventory.save_stock'|trans }}
+    </button>
+</form>

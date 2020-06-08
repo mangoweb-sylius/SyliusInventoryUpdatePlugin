@@ -1,0 +1,5 @@
+mango-sylius:
+    admin:
+        inventory:
+            saved: Current stock values were saved
+            save_stock: Save stock

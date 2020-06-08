@@ -1,0 +1,31 @@
+sylius_grid:
+    grids:
+        sylius_admin_inventory:
+            fields:
+                inventory:
+                    enabled: false
+                current_stock:
+                    type: twig
+                    path: .
+                    label: sylius.ui.current_stock
+                    options:
+                        template: "@MangoSyliusUpdateInventoryPlugin/SyliusAdmin/Inventory/Grid/Field/currentStock.html.twig"
+                on_hand:
+                    type: twig
+                    path: .
+                    label: sylius.ui.available_on_hand
+                    options:
+                        template: "@MangoSyliusUpdateInventoryPlugin/SyliusAdmin/Inventory/Grid/Field/onHand.html.twig"
+                reserved:
+                    type: twig
+                    path: .
+                    label: sylius.ui.reserved
+                    options:
+                        template: "@MangoSyliusUpdateInventoryPlugin/SyliusAdmin/Inventory/Grid/Field/reserved.html.twig"
+            actions:
+                main:
+                    update_inventory:
+                        type: update_variant_inventory
+    templates:
+        action:
+            update_variant_inventory: "@MangoSyliusUpdateInventoryPlugin/SyliusAdmin/Inventory/Grid/Action/updateInventory.html.twig"

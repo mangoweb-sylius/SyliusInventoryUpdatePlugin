@@ -1,0 +1,5 @@
+mango-sylius:
+    admin:
+        inventory:
+            saved: Skladové zásoby byly uloženy
+            save_stock: Uložit skladové zásoby

@@ -1,0 +1,17 @@
+{% if data.isTracked %}
+<div class="ui input">
+    <input form="sylius-update-inventory"
+           name="productVariants[{{ data.id }}]"
+           type="number"
+           value="{{ data.onHand }}"
+           {% if data.onHold > 0 %}
+               min="{{ data.onHold }}"
+           {% endif %}
+    >
+</div>
+{% else %}
+    <span class="ui red label">
+        <i class="remove icon"></i>
+        {{ 'sylius.ui.not_tracked'|trans }}
+    </span>
+{% endif %}
