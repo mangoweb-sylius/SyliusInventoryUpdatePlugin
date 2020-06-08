@@ -8,7 +8,7 @@
 
 ## Installation
 
-1. `composer require mangoweb-sylius/sylius-inventory-update`
+1. `composer require mangoweb-sylius/sylius-inventory-update-plugin`
 1. Add plugin classes to your `config/bundles.php`:
    ```php
    return [

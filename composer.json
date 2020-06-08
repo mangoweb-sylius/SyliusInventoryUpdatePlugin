@@ -1,5 +1,5 @@
 {
-    "name": "mangoweb-sylius/sylius-inventory-update",
+    "name": "mangoweb-sylius/sylius-inventory-update-plugin",
     "type": "sylius-plugin",
     "description": "Improved inventory management plugin for Sylius.",
     "license": "MIT",
