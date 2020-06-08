@@ -4,7 +4,7 @@
     </a>
 </p>
 
-<h1 align="center">Update inventory plugin</h1>
+<h1 align="center">Inventory update plugin</h1>
 
 ## Installation
 
@@ -13,18 +13,18 @@
    ```php
    return [
       ...
-      MangoSylius\UpdateInventoryPlugin\MangoSyliusUpdateInventoryPlugin::class => ['all' => true],
+      MangoSylius\InventoryUpdatePlugin\MangoSyliusInventoryUpdatePlugin::class => ['all' => true],
    ];
    ```
 1. Add resource to `config/packages/_sylius.yaml`
     ```yaml
     imports:
          ...
-         - { resource: "@MangoSyliusExtendedChannelsPlugin/Resources/config/resources.yml" }
+         - { resource: "@MangoSyliusInventoryUpdatePlugin/Resources/config/resources.yml" }
     ```
 1. Add routing to `config/_routes.yaml`
     ```yaml
     mango_sylius_extended_channels:
-        resource: '@MangoSyliusExtendedChannelsPlugin/Resources/config/routing.yml'
+        resource: '@MangoSyliusInventoryUpdatePlugin/Resources/config/routing.yml'
         prefix: /admin
     ```

@@ -1,6 +1,6 @@
 <?php
 
-namespace MangoSylius\UpdateInventoryPlugin\Controller;
+namespace MangoSylius\InventoryUpdatePlugin\Controller;
 
 use Sylius\Bundle\CoreBundle\Controller\ProductVariantController as BaseProductVariantController;
 use Sylius\Component\Core\Model\ProductTaxonInterface;

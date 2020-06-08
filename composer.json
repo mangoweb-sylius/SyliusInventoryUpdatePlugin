@@ -35,8 +35,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "MangoSylius\\UpdateInventoryPlugin\\": "src/",
-            "Tests\\MangoSylius\\UpdateInventoryPlugin\\": "tests/"
+            "MangoSylius\\InventoryUpdatePlugin\\": "src/",
+            "Tests\\MangoSylius\\InventoryUpdatePlugin\\": "tests/"
         }
     },
     "autoload-dev": {
