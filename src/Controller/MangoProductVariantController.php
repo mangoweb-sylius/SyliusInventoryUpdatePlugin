@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace MangoSylius\InventoryUpdatePlugin\Controller;
 
 use Sylius\Bundle\CoreBundle\Controller\ProductVariantController as BaseProductVariantController;
@@ -24,7 +26,7 @@ class MangoProductVariantController extends BaseProductVariantController
             throw new HttpException(Response::HTTP_FORBIDDEN, 'Invalid csrf token.');
         }
 
-        if (in_array($request->getMethod(), ['POST', 'PUT', 'PATCH',], true) && null !== $productVariantOnStock) {
+        if (in_array($request->getMethod(), ['POST', 'PUT', 'PATCH'], true) && null !== $productVariantOnStock) {
             /** @var ProductTaxonInterface $productTaxon */
             foreach ($productVariantOnStock as $id => $newOnHand) {
                 /** @var ProductVariantInterface $productVariant */
@@ -44,6 +46,7 @@ class MangoProductVariantController extends BaseProductVariantController
             assert($translator instanceof TranslatorInterface);
             $session->getFlashBag()->add('success', $translator->trans('mango-sylius.admin.inventory.saved'));
         }
+
         return $this->redirectHandler->redirectToReferer($configuration);
     }
 }
