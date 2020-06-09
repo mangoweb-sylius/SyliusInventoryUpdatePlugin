@@ -2,7 +2,7 @@ mango_sylius_admin_inventory_update:
     path: inventory/update
     methods: [PUT]
     defaults:
-        _controller: mango_sylius.update_inventory_plugin.controller.product_variant_controller:saveInventoryAction
+        _controller: MangoSylius\InventoryUpdatePlugin\Controller\MangoProductVariantController:saveInventoryAction
         _format: json
         _sylius:
             permission: true
