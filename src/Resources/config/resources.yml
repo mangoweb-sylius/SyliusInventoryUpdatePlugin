@@ -10,12 +10,6 @@ sylius_grid:
                     label: sylius.ui.current_stock
                     options:
                         template: "@MangoSyliusInventoryUpdatePlugin/SyliusAdmin/Inventory/Grid/Field/currentStock.html.twig"
-                on_hand:
-                    type: twig
-                    path: .
-                    label: sylius.ui.available_on_hand
-                    options:
-                        template: "@MangoSyliusInventoryUpdatePlugin/SyliusAdmin/Inventory/Grid/Field/onHand.html.twig"
                 reserved:
                     type: twig
                     path: .
