@@ -5,14 +5,6 @@ use Sylius\Behat\Page\Admin\Inventory\IndexPage as BaseIndexPage;
 
 final class IndexPage extends BaseIndexPage implements IndexPageInterface
 {
-    public function containsRow(array $parameters)
-    {
-        $tableAccessor = $this->getTableAccessor();
-        $table = $this->getElement('table');
-
-        $tableAccessor->getRowWithFields($table, $parameters);
-    }
-
     /**
      * @param string $variantName
      * @param int $onHand
@@ -36,5 +28,19 @@ final class IndexPage extends BaseIndexPage implements IndexPageInterface
     {
         $saveStockButton = $this->getDocument()->find('css', '.sylius-save-stock');
         $saveStockButton->click();
+    }
+
+    public function getOnHandForVariantWithName($variantName)
+    {
+        $tableAccessor = $this->getTableAccessor();
+        $table = $this->getElement('table');
+
+        $variantRow = $tableAccessor->getRowWithFields($table, [
+            'name' => $variantName,
+        ]);
+        assert($variantRow);
+        $onHandInput = $variantRow->find('css', 'input[name^="productVariants["]');
+        assert($variantRow);
+        return (int) $onHandInput->getValue();
     }
 }

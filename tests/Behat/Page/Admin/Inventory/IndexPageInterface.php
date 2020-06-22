@@ -5,7 +5,7 @@ use Sylius\Behat\Page\Admin\Inventory\IndexPageInterface as BaseIndexPageInterfa
 
 interface IndexPageInterface extends BaseIndexPageInterface
 {
-    public function containsRow(array $parameters);
+    public function getOnHandForVariantWithName($variantName);
 
     public function setOnHandForVariantWithName($variantName, $onHand);
 

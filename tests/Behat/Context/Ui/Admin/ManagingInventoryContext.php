@@ -42,10 +42,7 @@ final class ManagingInventoryContext implements Context
         string $productVariantName,
         int $quantity
     ) {
-        $this->indexPage->containsRow([
-            'name' => $productVariantName,
-            'on_hand' => $quantity,
-        ]);
+        assert($this->indexPage->getOnHandForVariantWithName($productVariantName) === $quantity);
     }
 
     /**
