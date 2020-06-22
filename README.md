@@ -4,7 +4,19 @@
     </a>
 </p>
 
-<h1 align="center">Inventory update plugin</h1>
+<h1 align="center">
+    Inventory update plugin
+    <br />
+    <a href="https://packagist.org/packages/mangoweb-sylius/sylius-inventory-update-plugin" title="License" target="_blank">
+        <img src="https://img.shields.io/packagist/l/mangoweb-sylius/sylius-inventory-update-plugin.svg" />
+    </a>
+    <a href="https://packagist.org/packages/mangoweb-sylius/sylius-inventory-update-plugin" title="Version" target="_blank">
+        <img src="https://img.shields.io/packagist/v/mangoweb-sylius/sylius-inventory-update-plugin.svg" />
+    </a>
+    <a href="https://travis-ci.org/mangoweb-sylius/SyliusInventoryUpdatePlugin" title="Build status" target="_blank">
+        <img src="https://img.shields.io/travis/mangoweb-sylius/SyliusInventoryUpdatePlugin/master.svg" />
+    </a>
+</h1>
 
 ## Installation
 
@@ -28,3 +40,31 @@
         resource: '@MangoSyliusInventoryUpdatePlugin/Resources/config/routing.yml'
         prefix: /admin
     ```
+   
+## Development
+
+### Usage
+
+- Develop your plugin in `/src`
+- See `bin/` for useful commands
+
+### Testing
+
+
+After your changes you must ensure that the tests are still passing.
+
+```bash
+$ composer install
+$ bin/console doctrine:schema:create -e test
+$ bin/behat
+$ bin/phpstan.sh
+$ bin/ecs.sh
+```
+
+License
+-------
+This library is under the MIT license.
+
+Credits
+-------
+Developed by [manGoweb](https://www.mangoweb.eu/).
