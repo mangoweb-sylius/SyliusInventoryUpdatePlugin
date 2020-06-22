@@ -29,6 +29,7 @@ class MangoProductVariantController extends BaseProductVariantController
         if (in_array($request->getMethod(), ['POST', 'PUT', 'PATCH'], true) && null !== $productVariantOnStock) {
             /** @var ProductTaxonInterface $productTaxon */
             foreach ($productVariantOnStock as $id => $newOnHand) {
+                $newOnHand = (int) $newOnHand;
                 /** @var ProductVariantInterface $productVariant */
                 $productVariant = $this->repository->findOneBy(['id' => $id]);
                 if ($productVariant->isTracked()) {
